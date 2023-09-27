@@ -328,20 +328,20 @@ div.item {
 }
 
 .contact-buttom > h3 {
-  padding-left: 1rem;
   color: #fff;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
+  padding: 2rem 2rem 0 2rem;
 }
 
 p#p {
   color: #fff;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
+
 
 /******************* Footer **************************/
 #footer {
