@@ -126,49 +126,50 @@ h1 {
   }
 }
 /******************* Experience **************************/
-.experience {
-  display: grid;
-  grid-template-columns: 6fr 6fr;
-  grid-template-areas: "a b";
+#experience {
   background-color: #b3a6ff;
   margin: 0;
   padding-top: 5rem;
 }
 
-.experience > h2 {
-  position: absolute;
-  text-align: center;
-  grid-row: 1fr;
+#experience > h2 {
+  display: flex;
+  justify-content: center;
   font-size: 5rem;
   color: #f47cb9;
-  width: 100%;
 }
 
-.experience > h3 {
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item > h3 {
   display: grid;
-  grid-area: a;
-  margin-top: 20%;
-  margin-left: 15px;
   font-size: 3rem;
   color: #f47cb9;
 }
 
-.experience-ul > h4 {
-  display: grid;
-  grid-area: b;
+.grid-item > h4 {
   font-size: 1.5rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   color: #fff;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
-.experience-ul > li {
+.grid-item > li {
   color: #fff;
   font-size: 1.3rem;
   line-height: 1.6;
   font-family: "Montserrat", sans-serif;
+  padding-bottom: 1rem;
+}
+
+hr {
+  border: 3px dashed #ed9ac2;
 }
 
 @media (max-width: 1200px) {
@@ -206,18 +207,12 @@ h1 {
   }
 }
 
-.projects > h2 {
+.projects h2 {
   color: #fff;
   display: flex;
   justify-content: center;
   font-size: 5rem;
-  padding: 5rem 0 2rem 0;
-}
-
-.project {
-  padding-left: 10%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 0 2rem 15rem;
 }
 
 .project img {
@@ -267,14 +262,14 @@ div.item {
   font-size: 1rem;
   width: 300px;
   letter-spacing: 2px;
-  padding-left: rem;
 }
 
 @media (max-width: 1200px) {
   div.project {
-    padding-left: 25%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .project-item img {
@@ -282,12 +277,12 @@ div.item {
     height: 300px;
   }
 
-  .project-item h3 {
+  .project h3 {
     font-size: 2rem;
     margin-bottom: 0;
   }
 
-  .project-item p {
+  .project p {
     margin: 0 0 2rem 0;
     font-size: 1.3rem;
   }
