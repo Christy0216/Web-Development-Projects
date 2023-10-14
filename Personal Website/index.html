@@ -1,150 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-</head>
+* {
+  margin: 0;
+  padding: 0;
+}
 
+/******************* Navigation Bar **************************/
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ed9ac2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
+li {
+  float: left;
+}
 
-<body>
-<!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav">
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  display: block;
+  padding: 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-             <ul class="navbar-list">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                     <a href="#about">About Me</a>
-                </li>
-                <li>
-                     <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#projects">Peojects</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-                <li>
-                    <a href="./Resume_Shirui_Chen_CA.pdf" download>My Resume</a>
-                </li>
-        </div>   
-        </div>   
-    </nav>
+li a:hover {
+  background-color: #f4b1d1;
+  color: #fff;
+  font-size: 1.1rem;
+}
 
-    <main>
-        <!-- Home -->
-        <section id="home">
-            <div class="container home">
-                <h1>Shirui's Website</h1>
-                <h3 class="h3">A Proactive Learner & A Web Developer</h3>
-            </div>
-        </section>
+@media (max-width: 1200px) {
+  * {
+    font-size: small;
+  }
+}
 
-        <!-- About -->
-        <section id="about">
-            <div class="container about">
-                <h2>Who am I?</h2>
-                <img src="./Shirui's selfie.JPG" alt="Shirui's photo" />
-                <p>Hello! My name is Shirui Chen. I am a dedicated computer science student actively working towards my second master's degree, currently improving my skills through web development courses. I am eager to apply my programming techniques and gain practical experience.</p>
-            </div>
-        </section>
+body {
+  margin: 0;
+}
 
-        <!-- Experience -->
-        <section id="experience">
-                <h2>What I Do</h2>
-        <div class="grid-container">
-        <div class="grid-item">
-    <h3>Education</h3>
-        <ul class="grid-item">
-            <li>Northeastern University - Vacouver, BC (2023-2024) <br /> M.S. in Computer Science</li>
-            <li>University of Southern California - Los Angeles, CA (2022-2023) <br /> M.S. in Analytics</li>
-            <li>Syracuse University - Syracuse, NY (2018-2021) <br /> B.S. in Mathematics and Economics</li>
-        </ul>
-        </div>
-        <div class="grid-item">
-    <h3>Work Experience</h3>
-            <h4>Strategy Operation, Intern - Tencent
-            <br>December 2020 - May 2021</h4>
-            <li>Collaborated with the team mentor in engaging daily operation of Tencent news content and led a new agging system rebuilt project.</li>
-            <li>Led the project to rebuild the tagging system, starting with researching and analyzing the shortcomings of the existing system and developed a detailed project plan</li>
-            <li>Collaborated with developers to design and develop the new system, conducted testing and refinement iterations to ensure the system's functionality and effectiveness.</li>
-            <li>The new tagging system significantly improved the efficiency of content tagging, leading to a 30% reduction in tagging time. Content categorization became more accurate, enhancing the user experience by delivering more relevant content to readers.</li>
-            <hr>
-            <h4>Customer Service Representative, Intern - CITIC Bank
-                <br> May 2020 - June 2020
-            </h4>
-            <li>Provided pre-transaction services according to guidelines to cater to customer needs.</li>
-            <li>Identified customers’ needs for financial service, introduced financial products based on their risk tolerance and anticipation for reward.</li>
-            <li>Helped plan and implement marketing events for multiple financial products to boost sales performance.</li>
-        </ul>
-    </div>
-</div> 
+/******************* Home **************************/
+#home > div {
+  background: url(./background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  color: #fff;
+}
 
-</section>
+h1 {
+  display: flex;
+  font-family: "Pacifico", cursive;
+  align-items: center;
+  font-size: 10rem;
+  margin: 0;
+  padding: 10rem 8rem 0 8rem;
+}
 
-    <!-- Projects -->
-    <section id="projects">
-        <div class="container projects">
-            <h2>Recent Work</h2>
-            <div class="project">
-                <div class="item">
-                <a href="https://christy0216.github.io/Web-Development-Projects/Mondrian%20Project/">
-                    <img src="./Mondrian.png" alt="photo of a Mondrian flag">
-                </a>
-                    <h3>Mondrian Painting</h3>
-                <p>Class project to create a Mondrian painting with CSS grid.</p>
-            </div>
+#home h3 {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding-bottom: 10rem;
+}
 
-                <div class="item">
-                <a href="https://christy0216.github.io/Web-Development-Projects/Tindog%20Project/index.html">
-                    <img src="./Tindog.jpg" alt="photo of Tindog website">
-                </a>
-                <h3>Tindog</h3>
-                <p>Class Project to build a Doggy Social Website Interface with BootStrap</p>
-            </div>
+@media (max-width: 1200px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
 
-                <div class="item">
-                    <a href="./index.html">
-                        <img src="./Personal Website.png" alt="photo of personal website">
-                    </a>
-                <h3>Personal Website</h3>
-                <p>Design a personal portfolio website applying HTML and CSS.</p>
-            </div>
-            </div>
-        </div>
-    </section>
+/******************* About **************************/
+.about {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: #e0a6ff;
+  margin: 0;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="contact-top">
-            <h2>Contact Me</h2>
-            <p>Let's collaborate to turn our concepts into tangible achievements together.</p>
-        </div>
+.about > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  color: #f47cb9;
+}
 
-        <div class="contact-buttom">
-            <h3>EMAIL</h3>
-            <p id="p">chen.shir@northeastern.edu</p>
-        </div>
-    </section>
-</main>
-    <!-- Footer -->
-<section id="footer">
-    <div class="footer">
-        <br>
-        <a class="footer-link" href="https://www.linkedin.com/in/shiruichen/">LinkedIn</a>
-        <a class="footer-link" href="https://github.com/Christy0216?tab=repositories">Github</a>
-        <p div class="copyright">Copyright © Shirui Chen. All rights Reserved.</p>
-    </div>
-</section>
-</body>
-</html>
+.about > p {
+  padding-left: 10rem;
+  width: 500px;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.about > img {
+  grid-row-start: span 2;
+  width: 350px;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .about > p {
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+/******************* Experience **************************/
+#experience {
+  background-color: #b3a6ff;
+  margin: 0;
+  padding-top: 5rem;
+}
+
+#experience > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  color: #f47cb9;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item > h3 {
+  display: grid;
+  font-size: 3rem;
+  color: #f47cb9;
+}
+
+.grid-item > h4 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  text-align: left;
+}
+
+.grid-item > li {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 1rem;
+}
+
+hr {
+  border: 3px dashed #ed9ac2;
+}
+
+@media (max-width: 1200px) {
+  .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    margin: 5rem;
+  }
+}
+
+/******************* Projects **************************/
+.projects {
+  background: linear-gradient(300deg, #e0a6ff, #ffa6f2, #b3a6ff);
+  background-size: 100% 100%;
+  animation: gradient-animation 10s ease infinite;
+  padding-bottom: 5rem;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.projects > h2 {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  padding: 5rem 0 2rem 0rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project img {
+  display: block;
+  border-radius: 5%;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  border: 5px dashed #fff;
+  padding: 0.5rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.project h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  width: 300px;
+  font-weight: bold;
+  padding: 1rem;
+  text-decoration: underline;
+}
+
+.project p {
+  text-align: center;
+  width: 120px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 300px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+  div.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-item img {
+    width: 500px;
+    height: 300px;
+  }
+
+  .project h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .project p {
+    margin: 0 0 2rem 0;
+    font-size: 1.3rem;
+  }
+}
+/******************* Contact **************************/
+.contact-top {
+  margin-top: 0.1rem;
+  background-image: url(./background1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact h2 {
+  padding: 8rem 8rem 0 10rem;
+  color: white;
+
+  font-size: 5rem;
+}
+
+.contact-top p {
+  padding: 0.5rem 0 3rem 10rem;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.contact-buttom {
+  background-color: #c0b5ff;
+}
+
+.contact-buttom > h3 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem 2rem 0 2rem;
+}
+
+p#p {
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+/******************* Footer **************************/
+#footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: #9885ff;
+  color: white;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 50px 0 30px;
+}
+.copyright {
+  color: #eaf6f6;
+  font-size: 0.74rem;
+  padding: 20px 0px;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 20px;
+  font-size: 1.5rem;
+  color: #8d01fe;
+  text-decoration: underline;
+}
+a:hover {
+  color: #fff;
+}
