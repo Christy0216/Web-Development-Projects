@@ -5,10 +5,6 @@
   width: auto;
 }
 
-body {
-  margin: 0;
-}
-
 /******************* Navigation Bar **************************/
 .navbar-list {
   list-style-type: none;
@@ -29,8 +25,6 @@ li a {
   display: block;
   color: #fff;
   padding: 1rem 2rem;
-  display: block;
-  padding: 1rem 2rem;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -49,6 +43,16 @@ li a:hover {
   }
 }
 
+@media (max-width: 800px) {
+  ul {
+    float: none;
+  }
+}
+
+body {
+  margin: 0;
+}
+
 /******************* Home **************************/
 #home > div {
   background: url(./background.png);
@@ -61,16 +65,20 @@ li a:hover {
 h1 {
   display: flex;
   font-family: "Pacifico", cursive;
-  justify-content: center;
+  align-items: center;
   font-size: 10rem;
   margin: 0;
+  padding: 10rem 8rem 0 8rem;
 }
 
 #home h3 {
   font-family: "Montserrat", sans-serif;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
-  padding-bottom: 20rem;
+  padding-bottom: 10rem;
 }
 
 @media (max-width: 1200px) {
@@ -129,6 +137,7 @@ h1 {
     width: 350px;
   }
 }
+
 /******************* Experience **************************/
 #experience {
   background-color: #b3a6ff;
@@ -188,7 +197,6 @@ hr {
     flex-direction: column;
     justify-content: center;
     padding-top: 3rem;
-    margin: 5rem;
   }
 }
 
@@ -211,12 +219,17 @@ hr {
   }
 }
 
-.projects h2 {
+.projects>h2 {
   color: #fff;
-  display: flex;
+  display:flex;
   justify-content: center;
   font-size: 5rem;
-  padding: 2rem 0 2rem 15rem;
+  padding: 5rem 0 2rem 0rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .project img {
@@ -228,11 +241,6 @@ hr {
   height: 200px;
   border: 5px dashed #fff;
   padding: 0.5rem;
-}
-
-.project {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .item {
@@ -269,21 +277,19 @@ hr {
   div.project {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
-  .project-item img {
+  .item img {
     width: 500px;
     height: 300px;
   }
 
-  .project h3 {
+  .item h3 {
     font-size: 2rem;
     margin-bottom: 0;
   }
 
-  .project p {
+  .item p {
     margin: 0 0 2rem 0;
     font-size: 1.3rem;
   }
@@ -300,7 +306,7 @@ hr {
 }
 
 #contact h2 {
-  padding: 8rem 8rem 0 10rem;
+  padding: 8rem 0rem 0 10rem;
   color: white;
 
   font-size: 5rem;
